@@ -3,7 +3,7 @@
 In the project directory, you must first run:
 
 ### `yarn install`
-Downloads all of Penumbra's dependencies.
+Downloads all of figma start page's dependencies.
 ### Available Commands
 
 ### `yarn start`

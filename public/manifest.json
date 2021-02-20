@@ -1,6 +1,6 @@
 {
-  "name": "MediumTab",
-  "description": "Medium articles, the good way!",
+  "name": "Your Board",
+  "description": "Your personal sharable canvas",
   "version": "1.0",
   "manifest_version": 2,
   "permissions" : ["management", "history", "storage"],

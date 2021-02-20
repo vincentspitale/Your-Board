@@ -1,8 +1,9 @@
 import React from "react";
+import tw from 'twin.macro'
 
 function Welcome() {
   return(
-    <div className="welcomeColor" style={{width:'100vh', height:'100vh'}}>
+    <div tw="w-screen">
  
         <h1 className="first">Welcome to your Board</h1>
         <br></br>
@@ -27,5 +28,5 @@ function Welcome() {
     </div>
   );
 };
-*/
+
 export default Welcome;

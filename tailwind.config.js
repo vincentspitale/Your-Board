@@ -8,7 +8,7 @@ module.exports = {
         
       },
       width: {
-        'w-screen': 'w-screen',
+        '400px': '400px'
       }
     },
   },

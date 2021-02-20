@@ -1,7 +1,11 @@
+// Function imports
 import React, { useState } from "react";
+
+// Component Imports
 import SideBar from "./SideBar";
 import Welcome from "./Welcome";
 
+// Style Imports
 import tw from 'twin.macro'
 
 const Board = props => {

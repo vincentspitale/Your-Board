@@ -1,13 +1,14 @@
+import React, { useState } from "react";
+
 import './App.css';
 import tw from 'twin.macro'
+import SideBar from "./SideBar";
+import Board from "./Board";
 
 function App() {
+  https://www.figma.com/proto/qAoAPNoJwt6SZxAj4w2DOL/Untitled?node-id=1%3A2&scaling=min-zoom
   return (
-    <div className="App" tw="bg-red-400">
-      <iframe src="https://www.figma.com/embed?embed_host=astra&url=https://www.figma.com/proto/qAoAPNoJwt6SZxAj4w2DOL/Untitled?node-id=1%3A2&scaling=min-zoom" frameborder="0">
-        </iframe>
-      <p>Hello World</p>
-    </div>
+    <Board />
   );
 }
 

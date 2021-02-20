@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import './App.css';
 import tw from 'twin.macro'
 import SideBar from "./SideBar";
 import Board from "./Board";

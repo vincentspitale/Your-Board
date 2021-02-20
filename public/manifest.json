@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "short_name": "Figma Start Page",
   "name": "Figma Start Page",
+  "chrome_url_overrides" : {
+    "newtab": "random.html"
+  },
   "description": "Sample application showing how to create an extension with Create React App",
   "browser_action": {
     "default_title": "CRE",
@@ -21,6 +24,7 @@
   "permissions": ["activeTab",
     "tabs",
     "notifications",
+    "storage",
     "*://*/*"],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

@@ -5,6 +5,7 @@ module.exports = {
       backgroundColor:{},
       width: {
         '400px': '400px',
+        '9/10': '90%'
       }
     },
   },

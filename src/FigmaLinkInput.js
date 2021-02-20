@@ -3,14 +3,18 @@ import React from "react";
 import tw from 'twin.macro'
 
 const FigmaLinkInput = ({figmaUrl, setFigmaUrl, ...props}) => {
-
   const setFigmaUrlProperty = (event) => {
     setFigmaUrl(event.target.value);
+    window.localStorage.setItem('figmaUrl', event.target.value);
   };
 
   return (
-    <div tw="border-4 border-black p-1 rounded-2xl">
-      <input type="text" value={figmaUrl} onChange={setFigmaUrlProperty} placeholder="Enter Figma Url" tw="w-9/12"/>
+    <div tw="border-4 border-black flex p-1 rounded-2xl">
+      <input type="text" value={figmaUrl} onChange={setFigmaUrlProperty} placeholder="Enter Figma Url" tw="outline-none w-9/10"/>
+      <svg width="23" height="28" viewBox="0 0 23 28" fill="none" xmlns="http://www.w3.org/2000/svg" tw="ml-auto">
+        <path d="M0 24.457C0 26.8008 1.18359 27.9961 3.49219 27.9961H13.8984C16.2188 27.9961 17.4023 26.8008 17.4023 24.457V22.4062H19.3125C21.6328 22.4062 22.8164 21.2109 22.8164 18.8672V9.94922C22.8164 8.55469 22.5352 7.66406 21.6797 6.79688L16.1133 1.125C15.3047 0.304688 14.3555 0 13.1367 0H8.90625C6.59766 0 5.41406 1.19531 5.41406 3.52734V5.57812H3.49219C1.18359 5.57812 0 6.77344 0 9.11719V24.457ZM16.3242 12.832L10.2539 6.65625C9.38672 5.77734 8.67188 5.57812 7.39453 5.57812H7.34766V3.59766C7.34766 2.53125 7.91016 1.92188 9.03516 1.92188H13.8398V7.46484C13.8398 8.77734 14.5078 9.43359 15.8086 9.43359H20.8828V18.7969C20.8828 19.8867 20.3086 20.4727 19.1836 20.4727H17.4023V15.8555C17.4023 14.4023 17.2266 13.7578 16.3242 12.832ZM15.5156 7.19531V2.80078L20.3906 7.74609H16.0664C15.6797 7.74609 15.5156 7.58203 15.5156 7.19531ZM1.93359 24.3867V9.1875C1.93359 8.12109 2.49609 7.51172 3.62109 7.51172H7.17188V13.8047C7.17188 15.2695 7.91016 15.9961 9.36328 15.9961H15.4688V24.3867C15.4688 25.4648 14.8945 26.0625 13.7695 26.0625H3.62109C2.49609 26.0625 1.93359 25.4648 1.93359 24.3867ZM9.5625 14.2266C9.11719 14.2266 8.94141 14.0508 8.94141 13.6055V7.92188L15.1406 14.2266H9.5625Z" fill="black"/>
+      </svg>
+
     </div>
   );
 };

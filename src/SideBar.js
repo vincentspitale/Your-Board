@@ -11,7 +11,7 @@ const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
       <div tw="pb-10">
         <Time />
       </div>
-      <h1 tw="text-2xl font-semibold">Your Board</h1>
+      <h1 tw="text-2xl font-semibold pb-5">Your Board</h1>
       <FigmaLinkInput figmaUrl={figmaUrl} setFigmaUrl={setFigmaUrl} />
     </div>
   );

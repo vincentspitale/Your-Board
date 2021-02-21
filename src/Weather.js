@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import tw from 'twin.macro'
 
 const Weather = props => {
 
@@ -29,7 +30,7 @@ const Weather = props => {
     
     return (
         getCoords(),
-        <p>Placeholder: 24℃</p>
+        <p tw="ml-auto w-max">24℃</p>
     );
 };
 

@@ -10,12 +10,15 @@ import tw from 'twin.macro'
 const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
   return (
     <div tw="w-400px pl-4 pr-4 pt-20">
-      <div tw="pb-10">
+      <div tw="pb-8">
       <Time />
-      </div>
+      <div tw="pt-3" >
       <Weather />
-      <p tw="text-2xl font-semibold">Your Board</p>
+      </div>
+      </div>
+      <h1 tw="text-2xl font-semibold pb-3">Your Board</h1>
       <FigmaLinkInput figmaUrl={figmaUrl} setFigmaUrl={setFigmaUrl} />
+      <h2 tw="text-xl font-semibold pt-6 pb-3">Friends</h2>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 
 import Time from './Time.js'
+import FigmaLinkInput from "./FigmaLinkInput";
 
 import Weather from './Weather'
 
@@ -14,8 +15,7 @@ const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
       </div>
       <Weather />
       <p tw="text-2xl font-semibold">Your Board</p>
-      <div>
-      </div>
+      <FigmaLinkInput figmaUrl={figmaUrl} setFigmaUrl={setFigmaUrl} />
     </div>
   );
 };

@@ -1,10 +1,15 @@
 module.exports = {
   theme: {
     extend: {
-      colors: {},
-      backgroundColor:{},
+      colors: {
+        
+      },
+      backgroundColor:{
+        
+      },
       width: {
         '400px': '400px',
+        '9/10': '90%'
       }
     },
   },

@@ -2,6 +2,8 @@ import React from "react";
 
 import Time from './Time.js'
 
+import Weather from './Weather'
+
 import tw from 'twin.macro'
 
 const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
@@ -10,6 +12,7 @@ const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
       <div tw="pb-10">
       <Time />
       </div>
+      <Weather />
       <p tw="text-2xl font-semibold">Your Board</p>
       <div>
       </div>

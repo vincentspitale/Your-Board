@@ -7,15 +7,18 @@ import CancelIcon from './CancelIcon';
 
 import tw from 'twin.macro';
 
-const FriendCard = ({name, url, isNew, deleteFunction, editFunction, ...props}) => {
+const FriendCard = ({friendName, figmaUrl, friendIsNew, deleteFunction, editFunction, ...props}) => {
 
-  const [isEditing, setIsEditing] = useState(isNew);
-  const [newName, setNewName] = useState(name);
-  const [newFigmaUrl, setNewFigmaURl] = useState(url);
+  const [isEditing, setIsEditing] = useState(friendIsNew);
+  const [newName, setNewName] = useState(friendName);
+  const [newFigmaUrl, setNewFigmaURl] = useState(figmaUrl);
+  if (newFigmaUrl === undefined) {
+    setNewFigmaURl("");
+  }
 
   const openUrlNewTab = () => {
     if (!isEditing) {
-      window.open(url, '_blank', "noopener, noreferrer");
+      window.open(figmaUrl, '_blank', "noopener, noreferrer");
     }
   };
 
@@ -27,16 +30,22 @@ const FriendCard = ({name, url, isNew, deleteFunction, editFunction, ...props}) 
   // checkmark
   const commitEdit = () => {
     setIsEditing(false);
-    editFunction();
+    console.log(newFigmaUrl);
+    const friendInfo = {name: newName, url: newFigmaUrl, isNew: false};
+    editFunction(friendInfo);
   };
 
   const cancelFunction = () => {
     setIsEditing(false);
-  }
+  };
 
   const setValue = (set) => {
     return (event) => {
-       set(event.target.value);
+      if (event.target.value === undefined) {
+        set("");
+      } else {
+        set(event.target.value);
+      }
     }
   };
 
@@ -55,12 +64,12 @@ const FriendCard = ({name, url, isNew, deleteFunction, editFunction, ...props}) 
             tw="outline-none w-full"
       />
          :
-          <h3>{name}</h3>
+          <h3>{friendName}</h3>
         }
         </div>
         <div tw="ml-auto flex flex-row items-center">
         {
-          isEditing && !isNew && <CancelIcon cancelFunction={cancelFunction} />
+          isEditing && !friendIsNew && <CancelIcon cancelFunction={cancelFunction} />
         }
         { isEditing ? <CommitIcon commitEdit={commitEdit} /> :
           <EditIcon editFunction={editingFunction} />

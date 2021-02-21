@@ -7,7 +7,7 @@ import FriendsList from './FriendsList.js'
 
 const Friends = ({...props}) => {
     const listString = window.localStorage.getItem('friendsList');
-
+    console.log(JSON.parse(listString));
     const [friendsList, setFriendsList] = useState(JSON.parse(listString));
     if (friendsList === null) {
         setFriendsList([]);
@@ -20,7 +20,7 @@ const Friends = ({...props}) => {
                     <AddButton setFriendsList={setFriendsList} friendsList={friendsList}/>
                 </div>
             </div>
-            <FriendsList />
+            <FriendsList friendsList={friendsList} setFriendsList={setFriendsList} />
         </div>
     );
 

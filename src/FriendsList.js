@@ -4,24 +4,48 @@ import tw from 'twin.macro'
 import FriendCard from "./FriendCard";
 
 const FriendsList = ({friendsList, setFriendsList, ...props}) => {
-    const name = "Vincent";
-    const url = "https://www.figma.com/proto/qAoAPNoJwt6SZxAj4w2DOL/Untitled?node-id=1%3A2&scaling=min-zoom";
-    const deleteFunction = () => {
-        console.log("Delete");
+    const deleteFunction = (index) => {
+        return () => {
+            let newFriendsList =  [...friendsList];
+            newFriendsList.splice(index, 1);
+            console.log("DELETE object:");
+            console.log(newFriendsList);
+            setFriendsList(newFriendsList);
+
+            // Update local storage
+            window.localStorage.setItem("friendsList", JSON.stringify(newFriendsList));
+        };
     };
 
-    const editFunction = () => {
-        console.log("EDIT");
+    const editFunction = (index) => {
+        return (friendInfo) => {
+            let newFriendsList =  [...friendsList];
+            newFriendsList.splice(index, 1, friendInfo);
+            setFriendsList(newFriendsList);
+
+            // Update local storage
+            window.localStorage.setItem("friendsList", JSON.stringify(newFriendsList));
+        };
     };
 
     return (
     <div>
-        <FriendCard
-          name={name}
-          url={url}
-          deleteFunction={deleteFunction}
-          editFunction={editFunction}
-        />
+        {
+            friendsList.map((element, key) => {
+                console.log("index: " + key);
+                console.log(element);
+
+                return <div tw="pb-2">
+                    <FriendCard
+                      friendName={element.name}
+                      figmaUrl={element.url}
+                      deleteFunction={deleteFunction(key)}
+                      editFunction={editFunction(key)}
+                      friendIsNew={element.isNew}
+                    />
+                </div>
+            })
+        }
     </div>
     );
 };

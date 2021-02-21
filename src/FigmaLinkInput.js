@@ -4,6 +4,12 @@ import tw from 'twin.macro'
 import CopyIcon from "./CopyIcon";
 
 const FigmaLinkInput = ({figmaUrl, setFigmaUrl, ...props}) => {
+
+  const buildShareUrl = (url) => {
+
+  };
+
+
   const setFigmaUrlProperty = (event) => {
     setFigmaUrl(event.target.value);
     window.localStorage.setItem('figmaUrl', event.target.value);

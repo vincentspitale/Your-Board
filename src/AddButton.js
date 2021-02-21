@@ -6,11 +6,11 @@ const AddButton = ({friendsList, setFriendsList, ...props}) => {
 
     const addFriend = () => {
         console.log(Array.isArray(friendsList));
-        let newFriendsList = friendsList;
-        newFriendsList.push({name: "", url: ""});
+        let newFriendsList = [...friendsList];
+        newFriendsList.push({name: "", url: "", isNew: true});
         setFriendsList(newFriendsList);
 
-        window.localStorage.setItem("friendsList", JSON.stringify(friendsList)); 
+        window.localStorage.setItem("friendsList", JSON.stringify(newFriendsList));
     };
 
     return (

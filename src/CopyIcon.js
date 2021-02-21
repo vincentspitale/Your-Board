@@ -4,7 +4,9 @@ import tw from 'twin.macro'
 
 const CopyIcon = ({copyText, ...props}) => {
   const addToClipBoard = () => {
-    document.execCommand("copy", false, copyText);
+    navigator.clipboard.writeText(copyText)
+      .then(() => { console.log(`Copied!`) })
+      .catch((error) => { console.log(`Copy failed! ${error}`) })
   };
 
   return (

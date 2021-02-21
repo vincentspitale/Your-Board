@@ -10,7 +10,7 @@ const FigmaLinkInput = ({figmaUrl, setFigmaUrl, ...props}) => {
   };
 
   return (
-    <div tw="border-4 border-black flex p-1 rounded-2xl">
+    <div tw="border-2 border-black flex p-1 rounded-2xl">
       <input
         type="text"
         value={figmaUrl}

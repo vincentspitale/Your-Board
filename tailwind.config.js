@@ -7,11 +7,6 @@ module.exports = {
           DEFAULT:'#A870B0',
           dark:'#A870B0',
         }
-        
-        
-      },
-      backgroundColor:{
-        
       },
       width: {
         '400px': '400px',

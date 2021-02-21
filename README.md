@@ -1,3 +1,6 @@
+## Contributors
+This project was made by [Christopher Wu](https://github.com/Chris2W), [Kevin Cam](https://github.com/kev1n80), [Paul Chafetz](https://github.com/pjchafetz), and myself
+
 ## Inspiration
 The COVID-19 pandemic and widespread isolation has taken its toll on millions of people, bringing with it loneliness and discontent. In these difficult times, we need a fast and easy way to bring people together, encourage support, and build a sense of community. With this goal in mind, we developed a Chrome extension, “Your Board.”
 

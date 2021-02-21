@@ -1,6 +1,7 @@
 import React from "react";
 
 import Time from './Time.js'
+import FigmaLinkInput from "./FigmaLinkInput";
 
 import tw from 'twin.macro'
 
@@ -10,7 +11,8 @@ const SideBar = ({figmaUrl, setFigmaUrl, ...props}) => {
       <div tw="pb-10">
         <Time />
       </div>
-      <p tw="text-2xl font-semibold">Your Board</p>
+      <h1 tw="text-2xl font-semibold">Your Board</h1>
+      <FigmaLinkInput figmaUrl={figmaUrl} setFigmaUrl={setFigmaUrl} />
     </div>
   );
 };

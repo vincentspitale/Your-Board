@@ -6,7 +6,7 @@ import FriendCard from "./FriendCard";
 const FriendsList = ({friendsList, setFriendsList, ...props}) => {
     const name = "Vincent";
     const url = "https://www.figma.com/proto/qAoAPNoJwt6SZxAj4w2DOL/Untitled?node-id=1%3A2&scaling=min-zoom";
-    const deleteFunciton = () => {
+    const deleteFunction = () => {
         console.log("Delete");
     };
 
@@ -19,7 +19,7 @@ const FriendsList = ({friendsList, setFriendsList, ...props}) => {
         <FriendCard
           name={name}
           url={url}
-          deleteFunction={deleteFunciton}
+          deleteFunction={deleteFunction}
           editFunction={editFunction}
         />
     </div>

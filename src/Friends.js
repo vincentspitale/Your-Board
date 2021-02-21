@@ -9,13 +9,15 @@ const Friends = ({...props}) => {
     const listString = window.localStorage.getItem('friendsList');
 
     const [friendsList, setFriendsList] = useState(JSON.parse(listString));
-
+    if (friendsList === null) {
+        setFriendsList([]);
+    }
     return (
         <div>
             <div tw="flex flex-row pt-6 pb-3">
                 <h2 tw="text-xl font-semibold ">Friends</h2>
                 <div tw="ml-auto">
-                    <AddButton />
+                    <AddButton setFriendsList={setFriendsList} friendsList={friendsList}/>
                 </div>
             </div>
             <FriendsList />

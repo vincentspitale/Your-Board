@@ -1,3 +1,29 @@
+## Inspiration
+The COVID-19 pandemic and widespread isolation has taken its toll on millions of people, bringing with it loneliness and discontent. In these difficult times, we need a fast and easy way to bring people together, encourage support, and build a sense of community. With this goal in mind, we developed a Chrome extension, “Your Board.”
+
+## What it does
+"Your Board" is a chrome extension that replaces the New Tab page in the Chrome browser with a digital canvas where you can see messages and images from friends and family.
+
+## How we built it
+The technologies that we used are Chrome DevTools, React, and Tailwind Macro. We used Chrome’s DevTools in order to create a Chrome extension that can modify the New Tab page in the Chrome browser and turn it into a view of the user-selected Figma project, React for its ability to quickly create a scalable project and its functionalities such as reusable components, and Tailwind Macro a CSS library that promotes inline CSS styling in order to avoid creating unique class names for our styles.
+React’s useState hook allowed us to keep track of various user data such as their Figma URL and their friends list which contains friend information such as their friend’s name and Figma URL. Finally, we leveraged a Storage object in order to save these aforementioned data locally. This allows users to exit the tab or browser and still have the data saved when they visit the New Tab page or their digital canvas again.
+
+## Challenges we ran into
+We had some trouble with Asynchronous calls, and React useState.
+We wanted to save information in the local storage with the local state after updating it with useState; however, it is an asynchronous call that takes time to update. Thus, when it was time to execute the command to save the local state in the local storage, it would not save the most updated value. Also, when trying to modify our state that is of type array, we needed  to make a copy of it first before splicing it.
+
+## Accomplishments that we're proud of
+We’re proud of our advanced use of local storage to have a persistent interaction whenever a new tab is opened. We also managed to leverage the capabilities of Figma to create a new use case it wasn’t necessarily built to support.
+
+## What we learned
+We learned to utilize local storage for saving data after closing the browser, learned a new framework of CSS called Tailwind, and scaled our extension app via React.
+
+## What's next for Your Board
+In the future we could add the capability to have bookmarks and other relevant links appear in the new tab window alongside your friends list. 
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
